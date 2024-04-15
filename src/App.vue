@@ -35,7 +35,8 @@ export default {
 
     <AppHeader :title="title"></AppHeader>
 
-    <ProjectsList></ProjectsList>
+    <!-- <ProjectsList></ProjectsList> -->
+    <router-view></router-view>
 
 
 </template>
