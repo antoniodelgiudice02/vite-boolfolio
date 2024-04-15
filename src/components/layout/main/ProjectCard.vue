@@ -3,7 +3,7 @@
 export default {
 
     props: {
-        project: Object
+        project: Object,
     },
 
     // computed: {
@@ -17,8 +17,6 @@ export default {
 <template>
 
     <div class="col">
-
-
 
         <div class="card">
             <div class="card-header">{{ project.title }}</div>
