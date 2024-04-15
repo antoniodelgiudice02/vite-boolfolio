@@ -7,7 +7,6 @@ import { api, store } from './store';
 
 //componenti
 import AppHeader from './components/layout/AppHeader.vue';
-import ProjectsList from './components/layout/main/ProjectsList.vue';
 
 export default {
     data() {
@@ -24,7 +23,7 @@ export default {
         
     },
 
-    components: { AppHeader, ProjectsList }
+    components: { AppHeader }
 }
 
 
@@ -36,7 +35,9 @@ export default {
     <AppHeader :title="title"></AppHeader>
 
     <!-- <ProjectsList></ProjectsList> -->
-    <router-view></router-view>
+    <div class="container">
+        <router-view></router-view>
+    </div>
 
 
 </template>
