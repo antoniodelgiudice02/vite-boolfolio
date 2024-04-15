@@ -3,6 +3,9 @@
 //store
 import { api, store } from '../../../store';
 
+//components
+import ProjectCard from './ProjectCard.vue'
+
 export default {
     data() {
         return {
@@ -10,30 +13,17 @@ export default {
             title: 'Projects',
         }
     },
-}
 
+    components:{ ProjectCard }
+}
 </script>
 
 <template>
 
     <div class="container">
         <h1>{{ title }}</h1>
-        <div class="row">
-            <div v-for='project in store.projects' class="col-4 my-2">
-                <div class="card">
-                    <div class="card-header">{{ project.title }}</div>
-                    <div class="card-body">
-                        <ul>
-                            <li>
-                                <strong>Id:</strong><span>{{ project.id }}</span>
-                            </li>
-                            <li>
-                                <strong>Descrizione:</strong><span>{{ project.content }}</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="row row-cols-3">
+            <ProjectCard v-for="project in store.projects" :project="project"></ProjectCard>
         </div>
     </div>
 

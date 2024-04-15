@@ -21,6 +21,7 @@ export default {
         axios.get(api.baseUrl + 'projects').then((response) => {
             store.projects = response.data.data;
         });
+        
     },
 
     components: { AppHeader, ProjectsList }
