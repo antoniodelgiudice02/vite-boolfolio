@@ -23,7 +23,9 @@ export default {
     <div class="container">
         <h1>{{ title }}</h1>
         <div class="row row-cols-3">
-            <ProjectCard v-for="project in store.projects" :project="project"></ProjectCard>
+            <router-link v-for="project in store.projects"  :to="{ name: 'detail', params: {id: project.id} }">
+                <ProjectCard :project="project"></ProjectCard>
+            </router-link>
         </div>
     </div>
 
