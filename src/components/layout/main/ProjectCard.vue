@@ -43,5 +43,9 @@ export default {
 </template>
 
 <style lang="scss">
-@use '/src/scss/general.scss'
+@use '/src/scss/general.scss';
+
+li{
+    list-style-type: none
+}
 </style>
