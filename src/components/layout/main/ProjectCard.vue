@@ -31,9 +31,9 @@ export default {
                     <li>
                         <span :style="'background-color: ' + project.type.color " class="badge">{{ project.type.label }}</span>
                     </li>
-                    <!-- <li>
-                        <span :style="'background-color: ' + project.technology.color " class="badge">{{ project.technology.label }}</span>
-                    </li> -->
+                    <li>
+                        <span v-for="technology in project.technologies" :style="'background-color: ' + technology.color " class="badge me-2">{{ technology.label }}</span>
+                    </li>
                 </ul>
             </div>
         </div>

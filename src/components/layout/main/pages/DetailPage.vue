@@ -30,8 +30,8 @@ export default {
 
 <template>
 
-    <div class="container">
-        <div class="row row-col-4">
+    <div class="container hw-100">
+        <div class="row row-col-4 justify-content-center align-items-center">
             <ProjectCard :project="store.project"></ProjectCard>
 
         </div>
